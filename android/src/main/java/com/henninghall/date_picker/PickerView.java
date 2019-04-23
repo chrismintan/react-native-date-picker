@@ -94,12 +94,12 @@ public class PickerView extends RelativeLayout {
         hourWheel.picker.setOnValueChangeListenerInScrolling(new NumberPickerView.OnValueChangeListenerInScrolling() {
             @Override
             public void onValueChangeInScrolling(NumberPickerView picker, int oldVal, int newVal) {
-                if(Settings.usesAmPm()){
-                    String oldValue = hourWheel.getValueAtIndex(oldVal);
-                    String newValue = hourWheel.getValueAtIndex(newVal);
-                    boolean passingNoonOrMidnight = (oldValue.equals("12") && newValue.equals("11")) || oldValue.equals("11") && newValue.equals("12");
-                    if (passingNoonOrMidnight) ampmWheel.picker.smoothScrollToValue((ampmWheel.picker.getValue() + 1) % 2,false);
-                }
+                // if(Settings.usesAmPm()){
+                //     String oldValue = hourWheel.getValueAtIndex(oldVal);
+                //     String newValue = hourWheel.getValueAtIndex(newVal);
+                //     boolean passingNoonOrMidnight = (oldValue.equals("12") && newValue.equals("11")) || oldValue.equals("11") && newValue.equals("12");
+                //     if (passingNoonOrMidnight) ampmWheel.picker.smoothScrollToValue((ampmWheel.picker.getValue() + 1) % 2,false);
+                // }
             }
         });
     }
